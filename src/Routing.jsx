@@ -1,7 +1,5 @@
 import React from "react";
-
 import { Routes, Route, Link,  } from "react-router-dom";
-
 import Rhome from "./Rhome"
 import Rabout from "./Rabout"
 import Rserves from "./Rserves"
@@ -22,6 +20,7 @@ const App=()=>{
                 <Route path="/about" element={<Rabout/>}/>
                 <Route path="/serves" element={<Rserves/>}/>
                 <Route path="/contact" element={<RContact/>}/>
+                <Route path="*" element={<h1>Error</h1>}/>
             </Route>
             </Routes>
 
