@@ -10,6 +10,9 @@ const Form=()=>{
     const [number,setnum]=useState("")
     const [pass,setpass]=useState("")
     
+    
+
+
     // let change=(e)=>{
     //     // console.log(e);
     //     // console.log(e.target);
@@ -18,9 +21,15 @@ const Form=()=>{
 
     let handlesubmit=(e)=>{
         e.preventDefault() // to prevent form reloading
-
         
-        alert("Form Submitted")
+        if (name==""){
+            alert("empty name")
+
+        }
+        else {
+            alert("Form Submitted")
+
+        }
     }
 
     return(
@@ -31,9 +40,13 @@ const Form=()=>{
         
 
         <form onSubmit={handlesubmit}>
+            <p>{err}</p>
         enter name <input type="text"  value={name}onChange={(e)=>{setname(e.target.value)}} /><br /> <br />
+        <h1>{email}</h1>
         enter email <input type="text" value={email} onChange={(e)=>{setemail(e.target.value)}} /><br /> <br />
+        <h1>{number}</h1>
         enter number <input type="text" value={number} onChange={(e)=>{setnum(e.target.value)}} /><br /> <br />
+        <h1>{pass}</h1>
         enter pass <input type="text" value={pass} onChange={(e)=>{setpass(e.target.value)}} /><br /> <br />
 
         <button type="submit"> Sign up</button>
