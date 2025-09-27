@@ -20,16 +20,13 @@ const Form=()=>{
     // }*
 
     let handlesubmit=(e)=>{
-        e.preventDefault() // to prevent form reloading
-        
-        if (name==""){
-            alert("empty name")
-
+        e.preventDefault()
+        if (formData.name==""){
+            alert("error name")
         }
-        else {
-            alert("Form Submitted")
-
-        }
+        else{
+        localStorage.setItem("name",formData.name)
+    }
     }
 
     return(
